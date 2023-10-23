@@ -1,0 +1,27 @@
+Algorithm Achat
+Variable j,i,nombre_articles:Entier
+         prix_article,total,montant_ttc,montant_final:Reel
+         nom_client:Chaine de caractere
+constante taux_tva = 0.15
+          taux_remise = 0.02
+
+Debut
+Pour j<--1 à 4 faire
+ total <-- 0
+ Ecrire("Entrez le nom du client",j,":")
+ Lire(nom_client)
+ Ecrire("Entrez le nombre d'articles achetés par",nom_client,":":
+ Lire(nombre_articles)
+ Pour i<--1 à nombre_articles + 1 faire
+  Ecrire("Entrez le prix de l'article",i,":")
+  Lire(prix_article)
+  total<--total + prix_article
+ Fin Pour
+ montant_ttc<--total * (1 + taux_tva)
+ montant_final<--montant_ttc * (1 - taux_remise)
+ Ecrire("Facture pour",nom_client",":")
+ Ecrire("Nombre d'articles achetés :",nombre_articles)
+ Ecrire("Le montant TTC  est :" ,montant_ttc,"DH")
+ Ecrire("Le montant avec remise est :",montant_final,"DH")
+Fin Pour
+Fin
